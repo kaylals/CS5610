@@ -1,0 +1,17 @@
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(2,100px);
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  border: 2px solid gray;
+  background-color: white; 
+}
+
+.fillBackground {
+  background-color: black;
+}
+
+
