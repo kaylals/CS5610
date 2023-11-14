@@ -8,17 +8,17 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+  background-color: #342f32; 
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  color: white;
   padding-top: 60px;
 }
 
 .game-container {
-  background: #fff;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 80px;
@@ -28,8 +28,8 @@ body {
 }
 
 h1 {
-  color: #333;
-  font-size: 24px;
+  color: white;
+  font-size: 45px; 
   margin-bottom: 100px; 
 }
 
@@ -45,17 +45,17 @@ input[type="text"] {
 
 button {
   padding: 10px 15px;
-  background-color: #f5ba13;
-  border: #f5ba13;
+  background-color: grey; 
+  border: none; 
   border-radius: 4px;
-  color: #f5ba13;
+  color: #3a393c; 
   cursor: pointer;
   font-size: 16px;
   margin-bottom: 15px; 
 }
 
 button:hover {
-  background-color: darken(#f5ba13, 10%); 
+  background-color: white; 
 }
 
 .feedback-container {
@@ -75,11 +75,12 @@ button:hover {
   border-radius: 4px; /* Rounded corners */
   font-size: 20px;
   font-weight: bold;
-  color: black; /* Ensures text is readable */
+  color: white; 
 }
 
 ul {
   list-style-type: none;
+  
 }
 
 .rules-container {
@@ -87,25 +88,25 @@ ul {
 }
 
 .rules-ol {
-  list-style-position: inside; /* Place numbers inside the list item area */
-  padding: 0; /* Remove default padding */
-  display: inline-block; /* Align the list block center */
-  text-align: left; /* Align list items text to left */
+  list-style-position: inside; 
+  padding: 0; 
+  display: inline-block; 
+  text-align: left;
 }
 
 .rules-ol li {
-  display: flex; /* Use flexbox for list items */
+  display: flex; 
 }
 
 nav {
-  background-color: #f5ba13; /* Header background color */
+  background-color: #9D9497; 
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   padding: 16px 32px;
-  position: fixed; /* Fix the navbar to the top */
+  position: fixed; 
   top: 0;
   left: 0;
-  width: 100%; /* Ensure it spans the full width */
-  z-index: 1000; /* Keep it above other content */
+  width: 100%; 
+  z-index: 1000; 
 }
 
 nav ul {
@@ -122,12 +123,13 @@ nav ul li {
 
 nav a {
   text-decoration: none;
-  color: #fff; /* Header text color */
+  color: #fff; 
   font-weight: 500;
 }
 
 nav a:hover {
   text-decoration: underline;
+  color:#3a393c;
 }
 
 .error-message {
@@ -158,9 +160,9 @@ nav a:hover {
   }
 
   button {
-    padding: 8px 10px; /* Smaller buttons */
-    font-size: 14px; /* Smaller font size for text in buttons */
-    margin-bottom: 10px; /* Less space below buttons */
+    padding: 8px 10px; 
+    font-size: 14px; 
+    margin-bottom: 10px; 
   }
 
   nav {
