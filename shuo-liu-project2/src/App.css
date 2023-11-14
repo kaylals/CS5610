@@ -130,7 +130,10 @@ nav a:hover {
   text-decoration: underline;
 }
 
-
+.error-message {
+  color: red; 
+  margin-top: 10px;
+}
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {

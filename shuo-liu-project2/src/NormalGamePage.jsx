@@ -11,6 +11,8 @@ function NormalGamePage({ wordList }) {
   const [feedback, setFeedback] = useState([]);
   const [gameStatus, setGameStatus] = useState('Normal Mode');
   const [attemptHistory, setAttemptHistory] = useState([]);
+  const [errorMessage, setErrorMessage] = useState('');
+
 
   useEffect(() => {
     const newTargetWord = wordList[Math.floor(Math.random() * wordList.length)];
@@ -24,9 +26,11 @@ function NormalGamePage({ wordList }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (userInput.length !== 6) {
-      alert('Please enter a 6-letter word.');
+      setErrorMessage('Please enter a 6-letter word.'); 
       return;
     }
+    setErrorMessage('');
+
 
     const newFeedback = userInput.split('').map((letter, index) => {
       if (targetWord[index] === letter) {
@@ -64,6 +68,7 @@ function NormalGamePage({ wordList }) {
   return (
     <div className="game-container">
       <h1>{gameStatus}</h1>
+      {errorMessage && <div className="error-message">{errorMessage}</div>}
       {gameStatus === 'Normal Mode' && <p>Attempts left: {attempts}</p>} 
       {gameStatus === 'Normal Mode' && (
         <InputForm 

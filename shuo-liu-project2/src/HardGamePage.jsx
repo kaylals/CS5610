@@ -11,6 +11,8 @@ function HardGamePage({ wordList }) {
     const [feedback, setFeedback] = useState([]);
     const [gameStatus, setGameStatus] = useState('Hard Mode');
     const [attemptHistory, setAttemptHistory] = useState([]);
+    const [errorMessage, setErrorMessage] = useState('');
+
   
     useEffect(() => {
       const newTargetWord = wordList[Math.floor(Math.random() * wordList.length)];
@@ -24,10 +26,10 @@ function HardGamePage({ wordList }) {
     const handleSubmit = (e) => {
       e.preventDefault();
       if (userInput.length !== 7) {
-        alert('Please enter a 7-letter word.');
+        setErrorMessage('Please enter a 7-letter word.');
         return;
       }
-  
+      setErrorMessage('');
       const newFeedback = userInput.split('').map((letter, index) => {
         if (targetWord[index] === letter) {
           return { letter, backgroundColor: 'green' };
@@ -68,6 +70,7 @@ function HardGamePage({ wordList }) {
     return (
       <div className="game-container">
         <h1>{gameStatus}</h1>
+        {errorMessage && <div className="error-message">{errorMessage}</div>}
         {gameStatus === 'Hard Mode' && <p>Attempts left: {attempts}</p>} 
         {gameStatus === 'Hard Mode' && (
           <InputForm 

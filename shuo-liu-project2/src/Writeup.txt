@@ -1,0 +1,35 @@
+Challenges Faced
+Throughout the development of the Wordle game app, one of the significant challenges was 
+the effective management of state and data flow between components. 
+The correct use of props and context to pass data around the application was a complex task
+that needed to be addressed. Ensuring that the game logic and state were in sync 
+across the game modes (normal and hard) while keeping the codebase clean and maintainable 
+required a deep understanding of React's data handling capabilities.
+
+Another challenge was replacing the disruptive JavaScript alert function with 
+a more integrated user notification system. This change aimed to enhance 
+the user experience by providing feedback that was less intrusive and more 
+contextual within the game's interface.
+
+Future Enhancements
+Given additional time, there are several features and design changes 
+that would significantly benefit the game:
+1. Save Game State: Implement functionality to save the game's state in local storage or a backend database to allow players to resume their game after closing the browser.
+2. Leaderboard: Create a global leaderboard that records high scores or fastest times for added competition.
+3. Daily Challenges: Introduce a daily Wordle challenge to engage users with new words daily.
+4. Custom Themes: Allow users to customize the theme of their game board with different colors and fonts.
+5. Accessibility Improvements: Enhance the game's accessibility by adding keyboard navigation support and screen reader compatibility.
+
+Assumptions Made
+During development, it was assumed that players would have varying levels of 
+familiarity with word puzzle games. This assumption guided the design decisions to make the game 
+intuitive for new players while still challenging for experienced ones. It was also assumed 
+that the game would primarily be a single-player experience without the need for real-time 
+multiplayer capabilities.
+
+Duration of Development
+The entire process of developing the Wordle game app took approximately 20hours. 
+This duration encompassed the planning phase, setting up the project structure, 
+developing core functionalities, designing responsive UI components, and implementing the 
+state management system using React's Context API and props effectively.
+
