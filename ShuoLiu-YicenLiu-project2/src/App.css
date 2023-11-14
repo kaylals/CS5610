@@ -1,0 +1,195 @@
+#root {
+  max-width: 1280px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding-top: 60px;
+}
+
+.game-container {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 80px;
+  margin: 50px auto;
+  width: auto; /* Adjust width as needed */
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 100px; 
+}
+
+
+input[type="text"] {
+  width: 60%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #f5ba13;
+  border: #f5ba13;
+  border-radius: 4px;
+  color: #f5ba13;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 15px; 
+}
+
+button:hover {
+  background-color: darken(#f5ba13, 10%); 
+}
+
+.feedback-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.attempt-history {
+  margin-top: 20px;
+}
+
+.feedback-letter {
+  display: inline-block; /* For horizontal display */
+  margin: 0 5px;
+  padding: 5px;
+  border-radius: 4px; /* Rounded corners */
+  font-size: 20px;
+  font-weight: bold;
+  color: black; /* Ensures text is readable */
+}
+
+ul {
+  list-style-type: none;
+}
+
+.rules-container {
+  text-align: center; 
+}
+
+.rules-ol {
+  list-style-position: inside; /* Place numbers inside the list item area */
+  padding: 0; /* Remove default padding */
+  display: inline-block; /* Align the list block center */
+  text-align: left; /* Align list items text to left */
+}
+
+.rules-ol li {
+  display: flex; /* Use flexbox for list items */
+}
+
+nav {
+  background-color: #f5ba13; /* Header background color */
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  padding: 16px 32px;
+  position: fixed; /* Fix the navbar to the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 1000; /* Keep it above other content */
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff; /* Header text color */
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: red; 
+  margin-top: 10px;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  /* Adjust the padding and font sizes for smaller screens */
+  body, #root {
+    padding: 1rem; /* Smaller padding on mobile */
+  }
+  
+  .game-container {
+    padding: 20px; /* Smaller padding for the game container */
+    margin: 20px; /* Adjust margin as needed */
+  }
+
+  h1 {
+    font-size: 20px; /* Smaller font size for headers */
+    margin-bottom: 50px; /* Less space below the header */
+  }
+
+  input[type="text"] {
+    width: 90%; /* Full width minus padding */
+    margin: 10px 5%; /* Centered with automatic margins */
+  }
+
+  button {
+    padding: 8px 10px; /* Smaller buttons */
+    font-size: 14px; /* Smaller font size for text in buttons */
+    margin-bottom: 10px; /* Less space below buttons */
+  }
+
+  nav {
+    padding: 8px 16px; /* Smaller padding on navbar */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center the links */
+  }
+
+  nav ul li {
+    margin: 5px 0; /* Less margin between nav items */
+  }
+
+  /* Ensure the feedback and attempt history are still visible and not too squished */
+  .feedback-container, .attempt-history {
+    flex-direction: column; /* Stack feedback and attempt history vertically */
+    align-items: center; /* Center items */
+  }
+
+  .feedback-letter, .attempt-history div {
+    margin: 5px 0; /* Adjust margin for stacked items */
+  }
+  
+  /* Footer adjustments if necessary */
+  footer {
+    position: relative; /* If you don't want it fixed at the bottom on mobile */
+    padding: 10px 0; /* Adjust padding */
+    font-size: 14px; /* Adjust font size */
+  }
+}
